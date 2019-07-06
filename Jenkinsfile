@@ -82,14 +82,14 @@ node('master') {
             // verify the staging environment is working properly
         }
 
-        stage('cleanup') {
-            devSpacesCleanup aksName: env.AKS_NAME, 
-                azureCredentialsId: env.AZURE_CRED_ID, 
-                devSpaceName: devSpaceNamespace, 
-                kubeConfigId: env.KUBE_CONFIG_ID, 
-                resourceGroupName: env.AKS_RES_GROUP,
-                helmReleaseName: releaseName
-        }
+        // stage('cleanup') {
+        //     devSpacesCleanup aksName: env.AKS_NAME, 
+        //         azureCredentialsId: env.AZURE_CRED_ID, 
+        //         devSpaceName: devSpaceNamespace, 
+        //         kubeConfigId: env.KUBE_CONFIG_ID, 
+        //         resourceGroupName: env.AKS_RES_GROUP,
+        //         helmReleaseName: releaseName
+        // }
 
     } else {
         // Send a notification
